@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirsens - Warm Up & Cool Down</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bodygal">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">
+          <img class="logo1" src="logo-no-background.png" alt="Kirsens Logo" />
+        </h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Sākums</a></li>
+          <li><a href="liet.html">Lietošana</a></li>
+          <li><a href="about.html">Par mums</a></li>
+          <li><a href="kontakti.html">Kontakti</a></li>
+          <li><a href="galerija.html">Galerija</a></li>
+        </ul>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <header class="headergal">
+      <h1 class="h1gal">Foto galerija</h1>
+    </header>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="kirsens1.jpeg" alt="Image 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="kirsens2.jpeg" alt="Image 2" />
+      </div>
+      <div class="gallery-item">
+        <video controls>
+          <source src="kirsis.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="gallery-item">
+        <img src="kirsens3.jpeg" alt="Image 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="kirsens4.jpeg" alt="Image 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="kirsens5.jpeg" alt="Image 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="kirsens7.jpeg" alt="Image 6" />
+      </div>
+    </section>
+    <script>
+      // Select all images in the gallery
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+
+      galleryImages.forEach((image) => {
+        image.addEventListener("click", function () {
+          // Toggle the 'zoomed' class on the clicked image
+          this.classList.toggle("zoomed");
+        });
+      });
+    </script>
+  </body>
+</html>
